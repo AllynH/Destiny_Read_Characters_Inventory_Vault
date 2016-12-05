@@ -16,9 +16,6 @@ api_key = API_KEY
 API_KEY = ""
 HEADERS = {"X-API-Key": API_KEY}
 
-# URL Builder:
-base_url = "https://www.bungie.net/platform/Destiny/"
-
 # Destiny parameters:
 membershipType = "2" # PS4 = 2
 destinyMembershipId = ""
@@ -33,6 +30,9 @@ characterHash = {
 	'Titan':'',
 	'Hunter':''
 }
+
+# URL Builder:
+base_url = "https://www.bungie.net/platform/Destiny/"
 
 # Vendor details:
 vendorHash = {
