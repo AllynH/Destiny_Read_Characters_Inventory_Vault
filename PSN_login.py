@@ -17,9 +17,21 @@ import requests
 import json
 import logging
 from base64 import b64encode
-from urlparse import urlparse
-import httplib
-httplib.HTTPConnection.debuglevel = 0
+try:
+	# Python 2.x:
+	from urlparse import urlparse
+except ImportError:
+	# Python 3.x:
+	from urllib.parse import urlparse
+
+try:
+	# Python 2.x:
+	import httplib
+	httplib.HTTPConnection.debuglevel = 0
+except ImportError:
+	# Python 3.x:
+	import http.client
+	http.client.HTTPConnection.debuglevel = 0
 
 def login(username, password, api_key):
 	################################################
